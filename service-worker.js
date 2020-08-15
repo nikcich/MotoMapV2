@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/YammieMeetupV2/precache-manifest.edcab1e1e11d9112fb1679a5f9f20aed.js"
+  "/YammieMeetupV2/precache-manifest.f04dae60fa8de88901d14d92bb96d072.js"
 );
 
 self.addEventListener('message', (event) => {
