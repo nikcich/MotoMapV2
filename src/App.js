@@ -23,7 +23,10 @@ import{
 
 import "@reach/combobox/styles.css";
 
+import Geocode from "react-geocode";
+
 import mapStyles from "./mapStyles";
+import originalList from "./originalList";
 import $ from 'jquery';
 
 import db from "./firebase";
@@ -33,7 +36,7 @@ import db from "./firebase";
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "80vw",
-  height: "80vh",
+  height: "60vh",
 };
 const center = {
   lat: 37.6872,
@@ -45,6 +48,52 @@ const options = {
   disableDefaultUI: true,
   zoomControl: true
 }
+
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+// Reverse geo-coding all of the original list and adding to database
+
+// console.log(originalList.length);
+
+// for(let i = 110; i < 141; i++){
+//   let curr = originalList[i];
+  
+//   const latlng = {
+//     lat: parseFloat(curr.lat),
+//     lng: parseFloat(curr.long)
+//   };
+
+//   Geocode.setApiKey("AIzaSyAkQaHkO5f2LymmHzYD0bAcAxj6h9a2kMU");
+
+//   Geocode.setLanguage("en");
+//   var wholeCityname = "";
+
+//   Geocode.fromLatLng(curr.lat.toString(10), curr.long.toString(10)).then(
+//     response => {
+//       const address = response.results[0].formatted_address;
+//       wholeCityname = address;
+
+//       db.collection("riders").add({
+//         name: curr.name,
+//         bike: curr.bike,
+//         lat: parseFloat(curr.lat),
+//         long: parseFloat(curr.long),
+//         country: curr.country,
+//         city: wholeCityname,
+//       });
+
+//     },
+//     error => {
+//       console.error(error);
+//     }
+//   ); 
+// }
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 
 let markersArr = [];
@@ -503,8 +552,6 @@ function getDist(lat1, lat2, lon1, lon2){
 
   return(c*r);
 }
-
-let PeopleList = [];
 
 
 function findPeople(){
