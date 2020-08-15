@@ -364,11 +364,25 @@ function sendEmail(){
         var countryName = document.getElementById('whatCountry').innerHTML
 
         var cityName = document.getElementById('whatCity').innerHTML;
+
+        var validUser = true;
+
+        for(let i = 0; i < checkedArrPart1.length; i++){
+          let thisName = checkedArrPart1[i].name.toLowerCase();
+          let othername =inputVal.toLowerCase();
+          if(thisName.includes(othername)){
+            validUser = false;
+          }
+        }
+
+        if(!inputVal.includes("#")){
+          validUser = false;
+        }
         
         if((latVal === '0' && LongVal === '0') || (latVal === '' && LongVal === '')){
           alert("Please enter a location first");
-        }else if(inputVal === ''){
-          alert("Please enter a username first");
+        }else if(inputVal === '' || validUser === false){
+          alert("Please enter a valid username first (Either you forgot the ID (Format of Name#0000) or the name already on the database");
         }else{
           var data = {
             service_id: 'gmail',
@@ -389,7 +403,7 @@ function sendEmail(){
               data: JSON.stringify(data),
               contentType: 'application/json'
           }).done(function() {
-              //alert('Tha');
+              alert('You were added to the database');
 
               // adding to the database
               db.collection("riders").add({
