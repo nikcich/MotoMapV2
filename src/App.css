@@ -1,38 +1,350 @@
-.App {
+:root {
+  --main-bg-color: #071e3d;
+  --main-bottom-color: #21e6c1;
+  --main-light-color: #1f4287;
+  --main-secondary-color: #278ea5;
+  --main-border-color: #1f4287;
+  --main-text-colors: white;
+}
+
+*{
+  font-family: "Arial", "Helvetica", "sans-serif";
+  margin: 0;
+}
+
+.headh{
+  
+}
+
+.markerh3{
+  color: black;
+}
+
+body{
+  background: linear-gradient(var(--main-bg-color), var(--main-bottom-color))
+}
+
+h1{
+  color: var(--main-text-colors);
+}
+
+h2{
+  color: var(--main-text-colors);
+}
+
+h3{
+  color: var(--main-text-colors);
+}
+
+.markerh3{
+  color: black;
+}
+
+.app{
+  background-color: none;
+}
+
+.theMap{
+  margin-top: 5vh;
+  margin-left: 10vw;
+}
+
+.search1{
+  margin-left: 35vw;
+  margin-top: 2vw;
+  width: 50vw;
+}
+
+.search1 input{
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 55%;
+  border-radius: 3vw;
+  border-width: 0.3vw;
+  border-color: var(--main-border-color);
+}
+
+.search1 input:hover{
+  outline: none;
+  border-color: var(--main-border-color);
+}
+
+.search1 input:focus{
+  outline: none;
+  border-color: var(--main-border-color);
+}
+
+.search2{
+  width: 75vw;
+}
+
+.search2 input{
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 3vw;
+  border-width: 0.3vw;
+  margin-left: 11vw;
+  border-color: var(--main-border-color);
+}
+
+.search2 input:hover{
+  outline: none;
+  border-color: var(--main-border-color);
+}
+
+.search2 input:focus{
+  outline: none;
+  border-color: var(--main-border-color);
+}
+
+.optionsbro{
+  background-color: none;
+  border-radius: 3vw;
+}
+
+.optionscontainer{
+  border-radius: 1vw;
+}
+
+.latlong-view{
+  color: var(--main-text-colors);
+}
+
+
+.latlong-view{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.latlong-view p{
+  font-size: 2vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+
+.country-view{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.country-view p{
+  font-size: 2vw;
+  color: var(--main-text-colors);
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+
+.submitPart{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.DiscordName{
+  display: flex;
+  height: 3vw;
+  width: 80%;
+  border-width: 0.3vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+  text-align: center;
+  border-color: var(--main-border-color);
+  margin-left: 9.5%;
+  margin-top: 1vw;
+}
+
+.biketype{
+  display: flex;
+  height: 3vw;
+  width: 70%;
+  border-width: 0.3vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+  text-align: center;
+  border-color: var(--main-border-color);
+  margin-left: 15%;
+  margin-top: 1vw;
+}
+
+.AddToList{
+  margin-top: 1vw;
+  margin-left: 25%;
+  height: 3vw;
+  width: 50%;
+  border-width: 0.3vw;
+  border-radius: 2vw;
+  border-color: var(--main-border-color);
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 1vw;
+}
+
+.MayTake{
+  font-size: 0.7vw;
+  color: var(--main-text-colors);
+  text-align: center;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 0.5vw;
+}
+
+input{
+  outline: none;
+}
+
+.FindPeople{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  
+}
+
+#FindPeople p{
+  font-size: 2vw;
+  color: var(--main-text-colors);
+  text-align: center;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.Radius{
+  display: flex;
+  height: 3vw;
+  width: 80%;
+  border-width: 0.3vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+  text-align: center;
+  border-color: var(--main-border-color);
+  margin-left: 9.5%;
+}
+
+.date{
+  display: flex;
+  height: 3vw;
+  width: 60%;
+  border-width: 0.3vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+  text-align: center;
+  border-color: var(--main-border-color);
+  margin-left: 20%;
+  margin-top: 1vw;
+}
+
+.FindPpl{
+  margin-top: 1vw;
+  margin-left: 25%;
+  height: 3vw;
+  width: 50%;
+  border-width: 0.3vw;
+  border-radius: 2vw;
+  border-color: var(--main-border-color);
+  font-size: 2vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.FindPpl:hover{
+  border-color: var(--main-border-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+b{
+  word-wrap: break-word;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.everyone{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100vw;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+#everyone h1{
+  font-size: 0.7vw;
+  color: var(--main-text-colors);
+  text-align: center;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 4vw;
+  margin-bottom: 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#advert h3{
+  font-size: 3vw;
+  color: var(--main-text-colors);
+  text-align: center;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 4vw;
+  margin-bottom: 2vw;
 }
+
+#advert h2{
+  font-size: 2vw;
+  color: var(--main-text-colors);
+  text-align: center;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  
+}
+
+#bottomh2{
+  font-size: 2vw;
+  color: var(--main-text-colors);
+  text-align: center;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-bottom: 3vw;
+}
+
+#search_input2{
+  font-size: 1.5vw;
+  background-color: #f5eded;
+  border-radius: 2vw;
+  border-width: 0.3vw;
+  border-color: var(--main-border-color);
+  height: 3vw;
+  width: 90vw;
+  margin-left: 4vw;
+  margin-bottom: 1vw;
+}
+
+.addy_view2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  
+}
+
+.latlong-view2{
+  display: flex;
+  justify-content: center;
+}
+
+.latlong-view2 p{
+  color: var(--main-text-colors);
+  font-size: 2vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-bottom: 1vw;
+}
+
+
+
+
+
+
+
