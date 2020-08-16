@@ -177,6 +177,8 @@ export default function App() {
         </nav>
       </header>
 
+      <hr class="sexy_line-TOP" />
+
       <div className ="theMap">
 
 
@@ -233,8 +235,9 @@ export default function App() {
       <div id = "submitPart">
         <input type="text" className="DiscordName" id = "DiscordName" placeholder="Type Discord name with ID (Name#ID)" />
         <input type="text" className="biketype" id = "biketype" placeholder="Enter your bike (2017 GSX1300R HAYABUSA)" />
-        <input type="button" className="AddToList" value="Click to Add To List" onClick={(sendEmail)} />
-        <h1 className = "MayTake">Can take up to a day to process request</h1>
+        <input type="button" className="AddToList" value="Add To List" onClick={(sendEmail)} />
+        <h1 className = "MayTake">WILL APPEAR IMMEDIATELY</h1>
+        <hr class="sexy_line" />
       </div>
       
 
@@ -242,18 +245,19 @@ export default function App() {
       <div id = "FindPeople">
       <p><b>--FIND MEMBERS NEAR ME--</b> <span id="myLabel1"></span></p>
       <input type="text" className="Radius" id = "Radius" placeholder="Enter radius in miles" />
-      <input type="button" className="FindPpl" value="Click to Find People" onClick={(findPeople)}/>
+      <input type="button" className="FindPpl" value="Find People" onClick={(findPeople)}/>
       <p><b id = "resultLabel">Members will appear here:</b> <span id="myLabel2"></span></p>
       <p><b id = "results">No members to display</b> <span id="myLabel2"></span></p>
+
+      <hr class="sexy_line" />
     </div>
 
     <div id = "advert">
-      <h3>---Upcoming Member Rides---</h3>
-
+      <h3>Upcoming Member Rides</h3>
       <h2>Location: 120 Triangle Shopping Center Downtown Longview Cowlitz County Washington United States 98632 4682</h2>
       <h2>Date: 9:30am, August 22</h2>
       <h2 id = "bottomh2">Host: tallis#0518</h2>
-
+      <hr class="sexy_line" />
       <h2>Request to Host a Meet</h2>
 
       <BottomSearch panTo={panTo, "2"}/>
@@ -265,7 +269,7 @@ export default function App() {
       <input type="text" className="date" id = "DateBox" placeholder="Enter the date and time (12:00pm MM/DD/YY)" />
       <input type="button" className="FindPpl" value="Click to request meetup ad" onClick={(requestmeet)}/>
 
-
+      <hr class="sexy_line" />
     </div>
 
     <div id = "everyone">
@@ -308,7 +312,7 @@ function Search({panTo, numberv}){
 
   return (
     <div className="search1">
-      <Combobox 
+      <Combobox className="comboboxMain"
         onSelect={async (address) => {
           setValue(address, false);
           clearSuggestions();
@@ -356,7 +360,7 @@ function Search({panTo, numberv}){
             placeholder="Enter a location"
           />
           <ComboboxPopover className="optionscontainer">
-            <ComboboxList>
+            <ComboboxList className="optionsList">
               {status === "OK" && data.map(({id, description}) => (
                 <ComboboxOption key={id} value={description} className="optionsbro"/>
               ))}

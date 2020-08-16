@@ -1,10 +1,19 @@
 :root {
-  --main-bg-color: #071e3d;
+  --main-bg-color: #1E1E1E;
+  --main-bg2-color: #212121;
+  --main-second-color: #252526;
+
   --main-bottom-color: #21e6c1;
   --main-light-color: #1f4287;
   --main-secondary-color: #278ea5;
   --main-border-color: #1f4287;
-  --main-text-colors: white;
+  --main-text-colors: #757575;
+
+  --button-grad-left: #B11213;
+  --button-grad-right: #D13E16;
+
+  --bottom-right-shadow: rgba(0,0,0,0.2);
+  --top-left-shadow: rgba(59, 58, 58, 0.125);
 }
 
 *{
@@ -16,6 +25,7 @@ header{
   justify-content: center;
 }
 #headh{
+  margin-top: 3vh;
   font-size: 3vw;
 }
 
@@ -24,19 +34,22 @@ header{
 }
 
 body{
-  background: linear-gradient(var(--main-bg-color), var(--main-bottom-color))
+  background-color: var(--main-bg-color);
 }
 
 h1{
   color: var(--main-text-colors);
+  
 }
 
 h2{
   color: var(--main-text-colors);
+  margin-bottom: 1vw;
 }
 
 h3{
   color: var(--main-text-colors);
+  margin-bottom: 1vw
 }
 
 .markerh3{
@@ -48,33 +61,41 @@ h3{
 }
 
 .theMap{
+  width: 80vw;
+  height: 60vh;
   margin-top: 5vh;
   margin-left: 10vw;
+  border-radius: 5vw;
 }
 
 .search1{
-  margin-left: 35vw;
-  margin-top: 2vw;
-  width: 50vw;
+  margin-left: 0vw;
+  margin-top: 2vh;
 }
 
 .search1 input{
   padding: 0.5rem;
   font-size: 1.5rem;
-  width: 55%;
-  border-radius: 3vw;
-  border-width: 0.3vw;
+  width: 55vw;
+  margin-left: 22vw;
+  border-radius: 0.5vw;
+  border-width: 0;
   border-color: var(--main-border-color);
+  color: var(--main-text-colors);
+  background-color: var(--main-background-color);
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+
+  margin-bottom: 2vw;
+  text-align: center;
 }
 
 .search1 input:hover{
   outline: none;
-  border-color: var(--main-border-color);
 }
 
 .search1 input:focus{
   outline: none;
-  border-color: var(--main-border-color);
 }
 
 .search2{
@@ -83,12 +104,19 @@ h3{
 
 .search2 input{
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 3vh;
   width: 100%;
-  border-radius: 3vw;
-  border-width: 0.3vw;
   margin-left: 11vw;
-  border-color: var(--main-border-color);
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
+
+  text-align: center;
 }
 
 .search2 input:hover{
@@ -101,13 +129,37 @@ h3{
   border-color: var(--main-border-color);
 }
 
-.optionsbro{
+.optionsList{
+  border-width: 0;
   background-color: none;
-  border-radius: 3vw;
+}
+
+.optionsbro{
+  border-radius: 0vw;
+  border-width: 0;
+  background-color: #1E1E1E;
+  border-radius: 0vw;
+}
+
+.comboboxMain{
+  border-radius: 0vw;
+  border-width: 0;
+  background-color: #1E1E1E;
+  border-radius: 0vw;
+
 }
 
 .optionscontainer{
-  border-radius: 1vw;
+  border-width: 0;
+  border-radius: 0vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background: transparent;
+  -webkit-appearance: none;
+  background-color: #1E1E1E;
+  background: linear-gradient(#1E1E1E, #1E1E1E);
+  border-color: #1E1E1E;
+  color: var(--main-text-colors);
 }
 
 .latlong-view{
@@ -119,8 +171,8 @@ h3{
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .latlong-view p{
@@ -133,8 +185,8 @@ h3{
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .country-view p{
@@ -152,50 +204,93 @@ h3{
 
 .DiscordName{
   display: flex;
-  height: 3vw;
+  height: 5vh;
   width: 80%;
-  border-width: 0.3vw;
-  border-radius: 2vw;
-  font-size: 2vw;
+  border-width: 0;
+  border-radius: 0.5vw;
+  font-size: 3vh;
   text-align: center;
-  border-color: var(--main-border-color);
   margin-left: 9.5%;
-  margin-top: 1vw;
+  margin-top: 1vh;
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
+
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+
 }
 
 .biketype{
   display: flex;
-  height: 3vw;
+  height: 5vh;
   width: 70%;
-  border-width: 0.3vw;
-  border-radius: 2vw;
-  font-size: 2vw;
+
+  font-size: 3vh;
   text-align: center;
-  border-color: var(--main-border-color);
   margin-left: 15%;
-  margin-top: 1vw;
+  margin-top: 1vh;
+
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
 }
 
 .AddToList{
-  margin-top: 1vw;
+  margin-top: 1vh;
   margin-left: 25%;
-  height: 3vw;
+  height: 5vh;
   width: 50%;
-  border-width: 0.3vw;
-  border-radius: 2vw;
-  border-color: var(--main-border-color);
-  font-size: 2vw;
+  font-size: 3vh;
   text-align: center;
-  margin-bottom: 1vw;
+  margin-bottom: 1vh;
+
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -1px -1px 1px 0 rgba(177,18,19, 0.5),
+              3px 3px 3px 0 rgba(209,62,22, 0.5),
+              -2px -2px 2px 0 rgba(105, 90, 86, .5);
+  background: linear-gradient(to right, var(--button-grad-left), var(--button-grad-right));
+  color: white;
+}
+
+.AddToList:hover{
+
 }
 
 .MayTake{
-  font-size: 0.7vw;
+  font-size: 1vh;
   color: var(--main-text-colors);
   text-align: center;
   margin-right: 3vw;
   margin-left: 3vw;
   margin-top: 0.5vw;
+}
+
+.sexy_line { 
+  margin: 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 15vh;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(var(--main-bg-color)), to(var(--main-bg-color)), color-stop(50%, var(--main-text-colors)));
+}
+
+.sexy_line-TOP { 
+  margin: 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  margin-top: 4vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 1vh;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(var(--main-bg-color)), to(var(--main-bg-color)), color-stop(50%, var(--main-text-colors)));
 }
 
 input{
@@ -210,50 +305,64 @@ input{
 }
 
 #FindPeople p{
-  font-size: 2vw;
-  color: var(--main-text-colors);
+  font-size: 3vh;
   text-align: center;
   margin-right: 3vw;
   margin-left: 3vw;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+  color: var(--main-text-colors);
 }
 
 .Radius{
   display: flex;
-  height: 3vw;
-  width: 80%;
-  border-width: 0.3vw;
-  border-radius: 2vw;
-  font-size: 2vw;
+  height: 5vh;
+  width: 65%;
+  font-size: 3vh;
   text-align: center;
-  border-color: var(--main-border-color);
-  margin-left: 9.5%;
+  margin-left: 17.5%;
+
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
 }
 
 .date{
   display: flex;
-  height: 3vw;
+  height: 5vh;
   width: 60%;
-  border-width: 0.3vw;
-  border-radius: 2vw;
-  font-size: 2vw;
+  font-size: 3vh;
   text-align: center;
-  border-color: var(--main-border-color);
   margin-left: 20%;
-  margin-top: 1vw;
+  margin-top: 1vh;
+
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
 }
 
 .FindPpl{
-  margin-top: 1vw;
+  margin-top: 1vh;
   margin-left: 25%;
-  height: 3vw;
+  height: 5vh;
   width: 50%;
-  border-width: 0.3vw;
-  border-radius: 2vw;
-  border-color: var(--main-border-color);
-  font-size: 2vw;
+  font-size: 3vh;
   text-align: center;
+
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -1px -1px 1px 0 rgba(177,18,19, 0.5),
+              3px 3px 3px 0 rgba(209,62,22, 0.5),
+              -2px -2px 2px 0 rgba(105, 90, 86, .5);
+  background: linear-gradient(to right, var(--button-grad-left), var(--button-grad-right));
+  color: white;
 }
 
 .FindPpl:hover{
@@ -273,28 +382,28 @@ b{
 }
 
 #everyone h1{
-  font-size: 0.7vw;
+  font-size: 3vh;
   color: var(--main-text-colors);
   text-align: center;
   margin-right: 3vw;
   margin-left: 3vw;
-  margin-top: 4vw;
-  margin-bottom: 2vw;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
 }
 
 
 #advert h3{
-  font-size: 3vw;
+  font-size: 4vh;
   color: var(--main-text-colors);
   text-align: center;
   margin-right: 3vw;
   margin-left: 3vw;
-  margin-top: 4vw;
-  margin-bottom: 2vw;
+  margin-top: 4vh;
+  margin-bottom: 5vh;
 }
 
 #advert h2{
-  font-size: 2vw;
+  font-size: 3vh;
   color: var(--main-text-colors);
   text-align: center;
   margin-right: 3vw;
@@ -303,7 +412,7 @@ b{
 }
 
 #bottomh2{
-  font-size: 2vw;
+  font-size: 3vh;
   color: var(--main-text-colors);
   text-align: center;
   margin-right: 3vw;
@@ -312,37 +421,49 @@ b{
 }
 
 #search_input2{
-  font-size: 1.5vw;
-  background-color: #f5eded;
-  border-radius: 2vw;
-  border-width: 0.3vw;
-  border-color: var(--main-border-color);
-  height: 3vw;
+  font-size: 3vh;
+  height: 5vh;
   width: 90vw;
   margin-left: 4vw;
-  margin-bottom: 1vw;
+  margin-bottom: 1vh;
+
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
 }
 
 .addy_view2{
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .latlong-view2{
   display: flex;
   justify-content: center;
+  border-width: 0;
+  border-radius: 0.5vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              3px 3px 3px 0 var(--bottom-right-shadow);
+  background-color: var(--main-background-color);
+  color: var(--main-text-colors);
+  width: 70vw;
+  height: 5.5vh;
+  margin-left: 15vw;
+  margin-bottom: 1vh;
 }
 
 .latlong-view2 p{
-  color: var(--main-text-colors);
-  font-size: 2vw;
+  font-size: 3vh;
   margin-right: 3vw;
   margin-left: 3vw;
-  margin-bottom: 1vw;
+  margin-bottom: 1vh;
+  padding: 0.5vw 0.5vh;
 }
 
 
