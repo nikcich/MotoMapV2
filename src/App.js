@@ -144,6 +144,7 @@ export default function App() {
   if(loadError) return "Error loading maps";
   if(!isLoaded) return "Loading maps...";
 
+  checkedArrPart1 = [];
   checkedArrPart1 = [...riders];
   checkedArr = [];
 
