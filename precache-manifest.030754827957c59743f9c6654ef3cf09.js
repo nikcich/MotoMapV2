@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b084c57fe2b8e10bf9bf7d66bfe06333",
+    "revision": "aa57937199d545bb256b1dfa2700cfd7",
     "url": "/YammieMeetupV2/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YammieMeetupV2/static/css/2.6eff3e32.chunk.css"
   },
   {
-    "revision": "1772c5e4695fa77b88a4",
-    "url": "/YammieMeetupV2/static/css/main.bb68b571.chunk.css"
+    "revision": "17230262ba41df2a30cf",
+    "url": "/YammieMeetupV2/static/css/main.d6393395.chunk.css"
   },
   {
     "revision": "d386f7c2a79aa66743db",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YammieMeetupV2/static/js/2.abe04e3f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1772c5e4695fa77b88a4",
-    "url": "/YammieMeetupV2/static/js/main.def53eb8.chunk.js"
+    "revision": "17230262ba41df2a30cf",
+    "url": "/YammieMeetupV2/static/js/main.2978c050.chunk.js"
   },
   {
     "revision": "49653c8b8795b2fe9b2b",
