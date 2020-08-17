@@ -451,12 +451,12 @@ function sendEmail(){
             }
           };
         
-          $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-              type: 'POST',
-              data: JSON.stringify(data),
-              contentType: 'application/json'
-          }).done(function() {
-              alert('You were added to the database');
+          // $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+          //     type: 'POST',
+          //     data: JSON.stringify(data),
+          //     contentType: 'application/json'
+          // }).done(function() {
+          //     alert('You were added to the database');
 
               // adding to the database
               db.collection("riders").add({
@@ -468,9 +468,9 @@ function sendEmail(){
                 city: cityName,
               });
 
-          }).fail(function(error) {
-              alert('Oops... ' + JSON.stringify(error));
-          });
+          // }).fail(function(error) {
+          //     alert('Oops... ' + JSON.stringify(error));
+          // });
         }
 }
 
