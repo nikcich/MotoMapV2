@@ -221,10 +221,18 @@ export default function App() {
 
       <Search panTo={panTo, "1"}/>
       
+      
+
+      <div id = "submitPart">
+        <input type="text" className="DiscordName" id = "DiscordName" placeholder="Type Discord name with ID (Name#ID)" />
+        <input type="text" className="biketype" id = "biketype" placeholder="Enter your bike (2017 GSX1300R)" />
+        <input type="button" className="AddToList" value="Add To List" onClick={(sendEmail)} />
+        <h1 className = "MayTake">WILL APPEAR IMMEDIATELY</h1>
+      </div>
+
       <div className="latlong-view">
         <p><b>Latitude:</b> <span id="latitude_view"></span></p>
         <p><b>Longitude:</b> <span id="longitude_view"></span></p>
-        
       </div>
 
       <div className="country-view">
@@ -232,13 +240,7 @@ export default function App() {
         <p><b>Country:</b> <span id="whatCountry"></span></p>
       </div>
 
-      <div id = "submitPart">
-        <input type="text" className="DiscordName" id = "DiscordName" placeholder="Type Discord name with ID (Name#ID)" />
-        <input type="text" className="biketype" id = "biketype" placeholder="Enter your bike (2017 GSX1300R HAYABUSA)" />
-        <input type="button" className="AddToList" value="Add To List" onClick={(sendEmail)} />
-        <h1 className = "MayTake">WILL APPEAR IMMEDIATELY</h1>
-        <hr class="sexy_line" />
-      </div>
+      <hr class="sexy_line" />
       
 
 
@@ -262,12 +264,13 @@ export default function App() {
 
       <BottomSearch panTo={panTo, "2"}/>
 
-      <div className="latlong-view2">
-        <p><b>Location:</b> <span id="addy_view2"></span></p>
-      </div>
+      
       <input type="text" className="Radius" id = "HostName" placeholder="Enter hosts Discord name with ID (Name#ID)" />
       <input type="text" className="date" id = "DateBox" placeholder="Enter the date and time (12:00pm MM/DD/YY)" />
       <input type="button" className="FindPpl" value="Click to request meetup ad" onClick={(requestmeet)}/>
+      <div className="latlong-view2">
+        <p><b>Location:</b> <span id="addy_view2"></span></p>
+      </div>
 
       <hr class="sexy_line" />
     </div>

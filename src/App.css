@@ -12,8 +12,14 @@
   --button-grad-left: #B11213;
   --button-grad-right: #D13E16;
 
-  --bottom-right-shadow: rgba(0,0,0,0.2);
-  --top-left-shadow: rgba(59, 58, 58, 0.125);
+  --bottom-right-shadow: rgba(0,0,0,.4);
+  --top-left-shadow: rgba(255, 255, 255, 0.125);
+
+  --third-option-color: #383838;
+
+  --pure-white: white;
+
+  --grey-to-white: #CCCCCC;
 }
 
 *{
@@ -76,17 +82,19 @@ h3{
 .search1 input{
   padding: 0.5rem;
   font-size: 1.5rem;
-  width: 55vw;
-  margin-left: 22vw;
+  width: 70vw;
+  margin-left: 15vw;
   border-radius: 0.5vw;
   border-width: 0;
   border-color: var(--main-border-color);
-  color: var(--main-text-colors);
-  background-color: var(--main-background-color);
-  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
 
-  margin-bottom: 2vw;
+  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
+              6px 6px 6px 0 var(--bottom-right-shadow);
+  
+  background-color: var(--pure-white);
+  color: var(--main-second-color);
+
+  margin-bottom: 1vh;
   text-align: center;
 }
 
@@ -111,10 +119,13 @@ h3{
   margin-bottom: 1vh;
   border-width: 0;
   border-radius: 0.5vw;
+  
+
   box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
-  background-color: var(--main-background-color);
-  color: var(--main-text-colors);
+              6px 6px 6px 0 var(--bottom-right-shadow);
+  
+  background-color: var(--pure-white);
+  color: var(--main-second-color);
 
   text-align: center;
 }
@@ -198,54 +209,52 @@ h3{
 
 .submitPart{
   display: flex;
-  width: 100vw;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .DiscordName{
-  display: flex;
   height: 5vh;
-  width: 80%;
+  width: 30%;
   border-width: 0;
   border-radius: 0.5vw;
   font-size: 3vh;
   text-align: center;
-  margin-left: 9.5%;
-  margin-top: 1vh;
-  background-color: var(--main-background-color);
-  color: var(--main-text-colors);
+  margin-left: 19.5vw;
 
   box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
-
+              6px 6px 6px 0 var(--bottom-right-shadow);
+  
+  background-color: var(--pure-white);
+  color: var(--main-second-color);
 }
 
 .biketype{
-  display: flex;
   height: 5vh;
-  width: 70%;
-
+  width: 30%;
   font-size: 3vh;
   text-align: center;
-  margin-left: 15%;
-  margin-top: 1vh;
+
+  margin-left: 1vw;
 
   border-width: 0;
   border-radius: 0.5vw;
   box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
-  background-color: var(--main-background-color);
-  color: var(--main-text-colors);
+              6px 6px 6px 0 var(--bottom-right-shadow);
+  
+  background-color: var(--pure-white);
+  color: var(---main-second-color);
 }
 
 .AddToList{
   margin-top: 1vh;
-  margin-left: 25%;
   height: 5vh;
   width: 50%;
   font-size: 3vh;
   text-align: center;
   margin-bottom: 1vh;
+  margin-left: 25vw;
 
   border-width: 0;
   border-radius: 0.5vw;
@@ -255,6 +264,28 @@ h3{
   background: linear-gradient(to right, var(--button-grad-left), var(--button-grad-right));
   color: white;
 }
+
+
+.DiscordName::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main-second-color);
+  opacity: 1; /* Firefox */
+}
+
+.search1 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main-second-color);
+  opacity: 1; /* Firefox */
+}
+
+
+
+
+
+.biketype::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main-second-color);
+  opacity: 1; /* Firefox */
+}
+
+
 
 .AddToList:hover{
 
@@ -325,10 +356,12 @@ input{
 
   border-width: 0;
   border-radius: 0.5vw;
+  
   box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
-  background-color: var(--main-background-color);
-  color: var(--main-text-colors);
+              6px 6px 6px 0 var(--bottom-right-shadow);
+  
+  background-color: var(--pure-white);
+  color: var(---main-second-color);
 }
 
 .date{
@@ -342,10 +375,12 @@ input{
 
   border-width: 0;
   border-radius: 0.5vw;
+  
   box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
-  background-color: var(--main-background-color);
-  color: var(--main-text-colors);
+              6px 6px 6px 0 var(--bottom-right-shadow);
+  
+  background-color: var(--pure-white);
+  color: var(---main-second-color);
 }
 
 .FindPpl{
@@ -448,9 +483,6 @@ b{
   justify-content: center;
   border-width: 0;
   border-radius: 0.5vw;
-  box-shadow: -3px -3px 3px 0 var(--top-left-shadow),
-              3px 3px 3px 0 var(--bottom-right-shadow);
-  background-color: var(--main-background-color);
   color: var(--main-text-colors);
   width: 70vw;
   height: 5.5vh;
